@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="index.js" defer></script>
     <title>Agência de Fomento do Tocantins</title>
 </head>
@@ -78,152 +81,201 @@
     <main>
         <!---Carrossel inicial-->
         <section>
-            <div class="flex justify-center items-center relative">
-                <div id="carrossel-Esquerda" onclick="esquerda()" class="absolute left-0 rounded-full bg-zinc-50 hover:scale-110 max-lg:hidden">
-                    <svg width="100px" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)" stroke="#372aac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#372aac"></path> </g></svg>                
-                </div>
-                <div class="max-h-125 flex">
-                    <img id="carrossel-Imagem-1" class="object-contain" src="./imagens/carrosselInicial/Slider1.JPG" alt="">
-                    <img id="carrossel-Imagem-2" class="object-contain transition duration-500 ease-in-out hidden" src="./imagens/carrosselInicial/Slider2.JPG" alt="">
-                    <img id="carrossel-Imagem-3" class="object-contain transition duration-500 ease-in-out hidden" src="./imagens/carrosselInicial/Slider3.JPG" alt="">
-                    <img id="carrossel-Imagem-4" class="object-contain transition duration-500 ease-in-out hidden" src="./imagens/carrosselInicial/Slider4.JPG" alt="">
+            <div class="swiper carrosselInicial flex justify-center items-center">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide max-h-125 object-contain" src="./imagens/carrosselInicial/Slider1.JPG" alt="">
+                    <img class="swiper-slide max-h-125 object-contain" src="./imagens/carrosselInicial/Slider2.JPG" alt="">
+                    <img class="swiper-slide max-h-125 object-contain" src="./imagens/carrosselInicial/Slider3.JPG" alt="">
+                    <img class="swiper-slide max-h-125 object-contain" src="./imagens/carrosselInicial/Slider4.JPG" alt="">
 
                 </div>
-                <div id="carrossel-Direita" onclick="direita()" class="absolute right-0 rounded-full bg-zinc-50 hover:scale-110 max-lg:hidden">
-                    <svg width="100px" height="100px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)" stroke="#372aac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#372aac"></path> </g></svg>                
-                </div>
-            </div>
-            <div class="flex justify-center space-x-2 mt-5">
-                <div class="h-5 w-5 rounded-full bg-indigo-800 hover:scale-120"></div>
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>    
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>    
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination-inicial flex justify-center mt-2"></div>
+                
             </div>
         </section>
         <!---Cards Linhas de crédito-->
         <section class="flex flex-col items-center">
-            <h1 class="my-9 text-3xl font-bold w-10/12 max-lg:flex max-lg:justify-center">Linhas de crédito</h1>
-            <div class="w-10/12 flex justify-center flex-wrap gap-12">
-                <a href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">POPULAR</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">AGRICULTURA FAMILIAR</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">MICROCRÉDITO ONLINE</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">FUNGETUR</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">MOBILIDADE URBANA</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">PROFISSIONAL LIBERAL</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">INOVACRED</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-                <a class="max-lg:hidden" href="/">
-                    <article class="hover:bg-zinc-100 hover:scale-110 h-75 w-75 rounded-2xl shadow-gray-500 shadow-2xl flex flex-col items-center relative">
-                        <h3 class="mt-2 text-2xl text-amber-500">CRÉDITO</h1>
-                        <h1 class="text-3xl text-center font-bold text-amber-500">COMÉRCIO E SERVIÇOS</h1>
-                        <img class="absolute bottom-3 h-44 w-44 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    </article>
-                </a>
-
-
+            <h1 class="lg:my-9 my-3 text-3xl font-bold w-10/12 max-lg:flex max-lg:justify-center">Linhas de crédito</h1>
+            <div class="w-10/12">
+                <div class="flex justify-center flex-wrap lg:gap-12 gap-3">
+                    <a href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">POPULAR</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">AGRICULTURA FAMILIAR</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">MICROCRÉDITO ONLINE</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">FUNGETUR</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">MOBILIDADE URBANA</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">PROFISSIONAL LIBERAL</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">INOVACRED</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                    <a class="" href="/">
+                        <article class="hover:bg-zinc-100 hover:scale-110 lg:h-75 lg:w-75 h-40 w-40 rounded-2xl shadow-gray-500 shadow-lg flex flex-col items-center relative">
+                            <h3 class="mt-2 lg:text-2xl text-sm text-amber-500">CRÉDITO</h1>
+                            <h1 class="lg:text-3xl text-lg text-center font-bold leading-5 lg:leading-8 text-amber-500">COMÉRCIO E SERVIÇOS</h1>
+                            <img class="absolute bottom-3 lg:h-44 lg:w-44 h-20 w-20 rounded-full" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        </article>
+                    </a>
+                </div>
             </div>
         </section>
         <!---Carrossel notícias-->
-        <section class="bg-indigo-800 mt-20 pb-8 flex flex-col items-center max-lg:">
+        <section class="bg-indigo-800 lg:mt-20 mt-10 pb-8 flex flex-col items-center relative">
             <h1 class="flex my-9 text-3xl text-white font-bold w-10/12 max-lg:justify-center">Notícias FomenTO</h1>
-            <div class="flex justify-center gap-12 w-10/12">
-                <article class="max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
-                    <img class="max-h-64 rounded-t-2xl"  width="448" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    <div class="m-2.5 relative">    
-                        <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
-                        <p class="text-white text-sm inline">04/04/2025</p>
-                        <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
-                    </div>
-                </article>
-                <article class="max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105 max-lg:hidden">
-                    <img class="max-h-64 rounded-t-2xl"  width="448" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    <div class="m-2.5 relative">    
-                        <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
-                        <p class="text-white text-sm inline">04/04/2025</p>
-                        <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
-                    </div>
-                </article>
-                <article class="max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105 max-lg:hidden">
-                    <img class="max-h-64 rounded-t-2xl"  width="448" src="/imagens/fotos/IMG_8147.JPG" alt="">
-                    <div class="m-2.5 relative">    
-                        <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
-                        <p class="text-white text-sm inline">04/04/2025</p>
-                        <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
-                    </div>
-                </article>
+            <div class="swiper carrosselNoticias w-10/12">
+                <div class="swiper-wrapper flex items-center lg:m-5">
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">1 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">2 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">3 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">4 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">5 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">6 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">7 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">8 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide max-w-md rounded-2xl backdrop-invert backdrop-opacity-10 hover:scale-105">
+                        <img class="max-h-64 w-full rounded-t-2xl" src="/imagens/fotos/IMG_8147.JPG" alt="">
+                        <div class="m-2.5 relative">    
+                            <p class="text-white text-3xl text-justify pb-2.5 max-lg:text-xl">9 Fomento recebe aporte de R$ 9 milhões para concessão de crédito no projeto "Mãos que Criam"</p>
+                            <p class="text-white text-sm inline">04/04/2025</p>
+                            <p class="text-white text-sm inline absolute right-0">Leia mais ></p>
+                        </div>
+                    </article>                
+                </div>
+                <div class="swiper-pagination-noticias flex justify-center mt-2"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev lg:ml-5"></div>
             </div>
-            <div class="flex justify-center space-x-2 mt-5">
-                <div class="h-5 w-5 rounded-full bg-amber-500 hover:scale-120"></div>
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>    
-                <div class="h-5 w-5 rounded-full bg-zinc-300 hover:scale-120"></div>    
-            </div>
-
-
+            
         </section>
         <!---Carrossel parceiros-->
         <section class="flex flex-col items-center pb-14">
             <h1 class="my-9 text-3xl font-bold w-10/12 max-lg:flex max-lg:justify-center">Nossos parceiros</h1>
-            <div class="flex justify-center gap-12 w-10/12">
-                <article>
-                    <img class="max-h-28" src="/imagens/logos/logo sebrae.png" alt="">
-                </article>
-                <article>
-                    <img class="max-h-28" src="/imagens/logos/logo abde.png" alt="">
-                </article>
-                <article class="">
-                    <img class="max-h-28" src="/imagens/logos/logo finep.png" alt="">
-                </article>
-                <article class="max-lg:hidden">
-                    <img class="max-h-28" src="/imagens/logos/logo fcdl.png" alt="">
-                </article>
-                <article class="max-lg:hidden">
-                    <img class="max-h-28" src="/imagens/logos/logo faet.png" alt="">
-                </article>
-                <article class="max-lg:hidden">
-                    <img class="max-h-28" src="/imagens/logos/logo sinduscon.jpg" alt="">
-                </article>
+            <div class="swiper carrosselParceiros w-10/12">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo sebrae.png" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo abde.png" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo finep.png" alt="">
+                    </article>                   
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo fcdl.png" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo faet.png" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo sinduscon.jpg" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo faciet.webp" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo fecomercio.png" alt="">
+                    </article>
+                    <article class="swiper-slide flex">
+                        <img class="h-20" src="/imagens/logos/logo sicon.jpg" alt="">
+                    </article>
+                </div>
             </div>
         </section>
     </main>

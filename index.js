@@ -1,3 +1,58 @@
+var swiper = new Swiper(".carrosselInicial", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: ".swiper-pagination-inicial",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+var swiper = new Swiper(".carrosselNoticias", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 8000,
+      },      
+      pagination: {
+        el: ".swiper-pagination-noticias",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+var swiper = new Swiper(".carrosselParceiros", {
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        }
+        },
+      centeredSlides: false,
+      loop: true,
+      autoplay: {
+        delay: 1000,
+      }
+    });
+
+
 function toggleMenuMobile(){
     let iconAbrir = document.getElementById("menu-abrir");
     let iconFechar = document.getElementById("menu-fechar");

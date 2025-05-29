@@ -4,4 +4,6 @@
 
 @theme {
     --font-display: "Montserrat", "Montserrat"; 
+    --swiper-pagination-bullet-size: 15px;
+
   }
